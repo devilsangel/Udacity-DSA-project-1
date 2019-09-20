@@ -1,0 +1,11 @@
+Assuming number of call records is N and number of text records is M.
+
+Task0 - O(1)
+
+Task1 - O(N + M)
+
+Task2 - O(N)
+
+Task3 - O(N)
+
+Task4 - O(N + M)
