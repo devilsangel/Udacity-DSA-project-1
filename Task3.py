@@ -27,8 +27,8 @@ for call in calls:
     else:
       bangloreCallSet[code]=1
 
-codeList = bangloreCallSet.keys()
-codeList.sort()
+codeList = sorted(bangloreCallSet)
+# codeList.sort()
 totalCalls=0
 print("The numbers called by people in Bangalore have codes:")
 for code in codeList:

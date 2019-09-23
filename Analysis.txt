@@ -1,11 +1,13 @@
 Assuming number of call records is N and number of text records is M.
 
-Task0 - O(1)
+Task0 - This algorithm does not depend on the size of the inputs hence the complexity is O(1)
 
-Task1 - O(N + M)
+Task1 - In this algorithm, we loop through both the text and the call records, hence the complexity is O(N + M)
 
-Task2 - O(N)
+Task2 - In this algorith we loop through the call records to find the longest call, hence the complexity is O(N)
 
-Task3 - O(N)
+Task3 - In this algorith we loop through the call records to find all the calls made from people in banglore
+ and find percentage of them made to people in banglore, hence the complexity is O(N)
 
-Task4 - O(N + M)
+Task4 - In this algorithm we loop through both the call and text records while updating a set of telemarketers based on each 
+of the records, hence the complexity is O(N + M)
