@@ -11,12 +11,32 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
     
-longestCall = calls[0]
+callTimesSet = {}
+recievingCallTimesSet = {}
 for call in calls:
-    if call[3] > longestCall[3]:
-        longestCall = call
+    if call[0] in callTimesSet:
+        callTimesSet[call[0]]+=call[3]
+    else:
+        callTimesSet[call[0]]=call[3]
+    if call[1] in recievingCallTimesSet:
+        recievingCallTimesSet[call[1]]+=call[3]
+    else:
+        recievingCallTimesSet[call[1]]=call[3]
 
-print("%s spent the longest time, %s seconds, on the phone during September 2016." % (longestCall[1], longestCall[3]))
+longestTime = calls[0][3]
+longestCaller = calls[0][1]
+
+for call in callTimesSet:
+    if(callTimesSet[call]>longestTime):
+        longestTime = callTimesSet[call]
+        longestCaller = call
+
+for call in recievingCallTimesSet:
+    if(recievingCallTimesSet[call]>=longestTime):
+        longestTime = recievingCallTimesSet[call]
+        longestCaller = call
+
+print("%s spent the longest time, %s seconds, on the phone during September 2016." % (longestCaller, longestTime))
 
 """
 TASK 2: Which telephone number spent the longest time on the phone

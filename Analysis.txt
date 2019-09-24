@@ -4,10 +4,16 @@ Task0 - This algorithm does not depend on the size of the inputs hence the compl
 
 Task1 - In this algorithm, we loop through both the text and the call records, hence the complexity is O(N + M)
 
-Task2 - In this algorith we loop through the call records to find the longest call, hence the complexity is O(N)
+Task2 - In this algorithm we loop through the call records to create a set of time spent making calls and a set of times spent recieving calls,
+the total size of both sets should in a worst case be 2N. Then we go through both sets to find the maximum time spent on call, hence the complexity is O(2N),
+which can be simplified to O(N)
 
-Task3 - In this algorith we loop through the call records to find all the calls made from people in banglore
- and find percentage of them made to people in banglore, hence the complexity is O(N)
+Task3 - In this algorithm we loop through the call records to find all the calls made from people in banglore
+ and find percentage of them made to people in banglore. After this we are sorting the obtained list using an inbuilt function.
+ Since its an inbuilt python algorithm we can assume it uses an optimal sorting algorithm. Considering the worst case, the list we sort
+ could have a size N. Hence the worst case complexity would be O(N + Nlog(N)) which can be simplified to O(Nlog(N))
 
 Task4 - In this algorithm we loop through both the call and text records while updating a set of telemarketers based on each 
-of the records, hence the complexity is O(N + M)
+of the records, which would have complexity of O(N+M). After this we sort the hence obtained set of telemarketers which in worst case could be 
+of size N. Since we are using a inbuilt sort function we can assume its optimal. Hence the worst case complexity woyld be O(N+M+Nlog(N)), which can be simplified to
+O(M + Nlog(N))
